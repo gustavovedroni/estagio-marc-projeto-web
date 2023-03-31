@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="script/script.js"></script>
+    <script src="script.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>layout</title>
+    <button class="usuarioLogado2" onclick='sair()'>Sair</button>
+    <script>
+		window.onload = function () {
+			var usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+			if (usuarioLogado) {
+
+				document.getElementById('usuarioLogado').textContent = usuarioLogado.login;
+			}
+		};
+		if (localStorage.getItem('token') == null) {
+			window.location.href = 'check.html'
+		}
+	</script>
+
+</head>
+<body>
+
+    <div class="background">
+        <header>
+
+            <div class="cabeçalho-link">
+                <li>
+					<a href="index.html">Home</a>
+				</li>
+
+				<li>
+					<a href="sobremim.html">Sobre</a>
+				</li>
+
+				<li>
+					<a href="github.html">GitHub</a>
+				</li>
+            </div><!--cabeçalho-link-->
+        </header>
+
+        <div class="container-text">
+            <div class="text">
+                <h3>Ola, Pessoal</h3>
+                <h1>Eu sou <span>Gustavo Vedroni</span></h1>
+                <p>Sou um Desenvolvedor Estagiário da Persisti, <br>com um forte interesse em aprender e desenvolver minhas habilidades em programação.<br> Atualmente estou procurando por oportunidades para aplicar meus conhecimentos,<br> e colaborar em projetos desafiadores.</p>
+                <a href="sobremim.html"><button class="btn">Sobre Mim</button></a>
+                <div class="usuarioLogado"><span style="color:white" id="usuarioLogado"></span></div>
+            </div><!--text-->
+        </div><!--container-text-->
+    </div><!--background-->
+
+
+
+
+
+</body>
+</html>

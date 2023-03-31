@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<script src="script/script.js"></script>
+	<script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="stylegithub.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+		integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>layout</title>
+	<button class="usuarioLogado2" onclick='sair()'>Sair</button>
+	<script>
+		window.onload = function () {
+			var usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+			if (usuarioLogado) {
+
+				document.getElementById('usuarioLogado').textContent = usuarioLogado.login;
+			}
+		};
+		if (localStorage.getItem('token') == null) {
+			window.location.href = 'check.html'
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<div class="background3">
+		<header>
+
+			<div class="cabeçalho-link">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+
+				<li>
+					<a href="sobremim.html">Sobre</a>
+				</li>
+
+				<li>
+					<a href="github.html">GitHub</a>
+				</li>
+
+			</div><!--cabeçalho-link-->
+		</header>
+		<div class="container-text">
+			<div class="text">
+				<article class="card">
+					<h3>Github-Fereveiro</h3>
+					<p>
+						Durante o primeiro mês de estágio na empresa PersisTI,
+						fui designado para o curso de "Preparatório para o mercado de trabalho
+						em Tecnologia da Informação com foco em Java", conforme especificado no programa
+						de treinamento da empresa. Neste curso, adquiri habilidades técnicas em introdução
+						à linguagem Java, banco de dados, JDBC , web services com Spring Boot, Git e
+						GitHub, de acordo com as especificações e objetivos do curso.
+					</p>
+					<span class="top span2"></span>
+					<span class="right span2"></span>
+					<span class="bottom span2"></span>
+					<span class="left span2"></span>
+				</article>
+				<a href="https://github.com/gustavovedroni/estagio-fevereiro">
+					<button class="btn2">Saiba Mais</button>
+				</a>
+			</div><!--text-->
+		</div><!--container-text-->
+		<div class="container-text">
+			<div class="text">
+				<article class="card">
+					<h3>GitHub-Março</h3>
+					<p>
+						Durante o segundo mês de estágio na empresa PersisTI, fui designado para o curso de "Web Design" e Metodologias Ágeis com Scrum,
+						conforme especificado no programa de treinamento da empresa. Neste curso, adquiri habilidades técnicas em introdução a HTML,
+						introdução a CSS, responsividade de sites e Flexbox, introdução a Javascript, lógica de programação com Javascript, projeto web e metodologias ágeis com Scrum,
+						de acordo com as especificações e objetivos do curso.
+					</p>
+					<span class="top span2"></span>
+					<span class="right span2"></span>
+					<span class="bottom span2"></span>
+					<span class="left span2"></span>
+				</article>
+				<a href="https://github.com/gustavovedroni/estagio-fevereiro">
+					<button class="btn2">Saiba Mais</button>
+				</a>
+			</div><!--text-->
+		</div><!--container-text-->
+		<div class="container-text">
+			<div class="text">
+				<article class="card">
+					<h3>GitHub-Abril</h3>
+					<p>
+						No terceiro mês de estágio na empresa PersisTI, serei designado para o curso de "Formação Angular 13", 
+						conforme especificado no programa de treinamento da empresa. Neste curso, irei adquirir habilidades técnicas em introdução a Angular
+						e projetos práticos, de acordo com as especificações e objetivos do curso.
+					</p>
+					<span class="top span2"></span>
+					<span class="right span2"></span>
+					<span class="bottom span2"></span>
+					<span class="left span2"></span>
+				</article>
+				<button class="btn2">Saiba Mais</button>
+			</div><!--text-->
+			<div class="usuarioLogado"><span style="color:white" id="usuarioLogado"></span></div>
+		</div><!--container-text-->
+
+	</div><!--background-->
+
+
+
+
+
+</body>
+
+</html>
