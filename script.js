@@ -3,37 +3,37 @@ function cadastrar() {
     var Senha = document.getElementById('senhacad').value;
     var listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
-    if(Login.trim()==''){
+    if (Login.trim() == '') {
         Swal.fire(
             `Login nao pode estar vazio!`,
             '',
             'error'
-          );
+        );
         return;
-    }else if(Login.length <= 4){
+    } else if (Login.length <= 4) {
         Swal.fire(
             `Login nao pode ter menos que 5 caracteres!`,
             '',
             'error'
-          );
+        );
         return;
     }
-     else if (Senha.trim() == '') {
+    else if (Senha.trim() == '') {
         Swal.fire(
             `Senha nao pode estar vazia!`,
             '',
             'error'
-          );
+        );
         return;
     } else if (Senha.length <= 4) {
         Swal.fire(
             `Senha nao pode ter menos que 5 caracteres!`,
             '',
             'error'
-          );
+        );
         return;
-        }
-    
+    }
+
 
     for (let i = 0; i < listaUser.length; i++) {
         if (Login == listaUser[i].userCad) {
@@ -41,7 +41,7 @@ function cadastrar() {
                 `Usuario ${Login} ja está cadastrado!`,
                 '',
                 'info'
-              );
+            );
             return;
         }
     }
@@ -57,14 +57,14 @@ function cadastrar() {
         'CADASTRO REALIZADO COM SUCESSO!',
         `Bem vindo: ${Login}`,
         'success'
-      );
+    );
     limpar();
 
 }
 
-function limpar(){
-    document.getElementById('logincad').value='';
-    document.getElementById('senhacad').value='';
+function limpar() {
+    document.getElementById('logincad').value = '';
+    document.getElementById('senhacad').value = '';
 }
 
 
@@ -84,6 +84,11 @@ function logar() {
             return;
         }
     }
+    Swal.fire(
+        `Usuario ou senha incorretos!`,
+        '',
+        'error'
+    );
 }
 
 function sair() {
